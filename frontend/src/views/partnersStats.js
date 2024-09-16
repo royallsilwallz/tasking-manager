@@ -103,25 +103,20 @@ export const PartnersStats = () => {
               </h3>
             )}
             <div className="flex justify-between">
-              <div className="flex" style={{ gap: '0.75rem' }}>
+              <div className="flex gap-0.75">
                 {tabData.map(({ id: tabId, title }) => (
                   <div
                     key={tabId}
-                    className={`flex items-center pointer ${
+                    className={`flex items-center pointer partners-tab-item ${
                       tabname === tabId ? 'bg-tan blue-dark' : 'bg-grey-dark white'
                     }`}
-                    style={{
-                      borderRadius: '3px 3px 0px 0px',
-                      padding: '0.625rem 1.375rem',
-                      fontWeight: '500',
-                    }}
                     onClick={() => navigate(`/partners/${id}/stats/${tabId}`)}
                   >
                     <p className="ma0">{title}</p>
                   </div>
                 ))}
               </div>
-              <div className="flex" style={{ gap: '1.5rem' }}>
+              <div className="flex gap-1.5">
                 {/* new to mapping button */}
                 <Link to={`/learn/map/`}>
                   <Button
@@ -137,7 +132,7 @@ export const PartnersStats = () => {
 
                 {/* social logos */}
                 {!!socialLinks.length && (
-                  <div className="flex items-center" style={{ gap: '0.625rem' }}>
+                  <div className="flex items-center gap-0.625">
                     {socialLinks.map((link) => (
                       <a
                         href={partner[link]}
